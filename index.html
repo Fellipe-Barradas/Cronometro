@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronometro simples</title>
+    <!--CSS-->
+    <style>
+        .title{
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial';
+            font-size: 4rem;
+        }
+        .cronometro{
+            justify-content: center;
+            display: flex;
+            padding: 10px;
+            font-size: 4rem;
+            font-family: sans-serif;
+        }
+        .buttons{
+            text-align: center;
+            font-size: 1rem;
+        }
+    </style>
+    <!--HTML-->
+</head>
+<body>
+    <h1 class="title">Cronometro simples</h1>
+    <div class="cronometro">
+        <div id="hours">0:</div>
+        <div id="minutes">0:</div>
+        <div id="seconds">0:</div>
+        <div id="miliseconds">0</div>
+    </div>
+    <div class="buttons">
+        <button class="btn-init">Iniciar</button>
+        <button class="btn-pause">Pausar</button>
+        <button class="btn-reset">Reiniciar </button>
+    </div>
+    <!--JAVASCRIPT-->
+</body>
+</html>
