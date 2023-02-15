@@ -35,10 +35,58 @@
         <div id="miliseconds">0</div>
     </div>
     <div class="buttons">
-        <button class="btn-init">Iniciar</button>
-        <button class="btn-pause">Pausar</button>
-        <button class="btn-reset">Reiniciar </button>
+        <button class="btn-init" onclick="init()">Iniciar</button>
+        <button class="btn-pause" onclick="pause()">Pausar</button>
+        <button class="btn-reset" onclick="reset()">Reiniciar </button>
     </div>
     <!--JAVASCRIPT-->
+    <script>
+        const hours = document.querySelector("#hours")
+        const minutes= document.querySelector("#minutes")
+        const seconds = document.querySelector("#seconds")
+        const miliseconds = document.querySelector("#miliseconds")
+        var h = 0
+        var m = 0
+        var s = 0 
+        var ml = 0
+        var interval
+        function init(){
+            pause()
+            interval = setInterval(watch, 10);
+        }
+        function pause(){   
+            clearInterval(interval)
+        }
+        function reset(){
+            clearInterval(interval)
+            hours.innerHTML = '0'
+            minutes.innerHTML = ':0'
+            seconds.innerHTML = ':0'
+            miliseconds.innerHTML = ':0'
+            ml = 0
+            h = 0
+            m = 0
+            s = 0
+        }
+        function watch(){
+            ml++
+            if(ml == 99){
+                ml = 0
+                s++
+            }
+            if(s==3){
+               s=0
+               m++
+            }
+            if(m==3){
+               m=0
+               h++
+            }
+            miliseconds.innerHTML=`:${ml}`
+            seconds.innerHTML=`:${s}`
+            minutes.innerHTML=`:${m}`
+            hours.innerHTML=`${h}`
+        }
+    </script>
 </body>
 </html>
