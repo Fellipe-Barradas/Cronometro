@@ -50,7 +50,7 @@
         <div id="seconds">0:</div>
         <div id="miliseconds">0</div>
     </div>
-    <div class="buttons">
+    <div class="buttons" >
         <button class="btn-init" onclick="init()">Iniciar</button>
         <button class="btn-pause" onclick="pause()">Pausar</button>
         <button class="btn-reset" onclick="reset()">Reiniciar </button>
@@ -90,11 +90,11 @@
                 ml = 0
                 s++
             }
-            if(s==3){
+            if(s==59){
                s=0
                m++
             }
-            if(m==3){
+            if(m==59){
                m=0
                h++
             }
